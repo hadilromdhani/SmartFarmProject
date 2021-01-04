@@ -42,6 +42,7 @@ create_acceuil (void)
   GtkWidget *hbox1;
   GtkWidget *image3;
   GtkWidget *label3;
+  GtkWidget *label46_message;
 
   acceuil = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (acceuil), _("Acceuil"));
@@ -84,7 +85,7 @@ create_acceuil (void)
 
   button1_validerAcceuil = gtk_button_new ();
   gtk_widget_show (button1_validerAcceuil);
-  gtk_fixed_put (GTK_FIXED (fixed1), button1_validerAcceuil, 328, 488);
+  gtk_fixed_put (GTK_FIXED (fixed1), button1_validerAcceuil, 328, 520);
   gtk_widget_set_size_request (button1_validerAcceuil, 112, 40);
 
   alignment1 = gtk_alignment_new (0.5, 0.5, 0, 0);
@@ -102,6 +103,11 @@ create_acceuil (void)
   label3 = gtk_label_new_with_mnemonic (_("Valider"));
   gtk_widget_show (label3);
   gtk_box_pack_start (GTK_BOX (hbox1), label3, FALSE, FALSE, 0);
+
+  label46_message = gtk_label_new (_("label46"));
+  gtk_widget_show (label46_message);
+  gtk_fixed_put (GTK_FIXED (fixed1), label46_message, 368, 448);
+  gtk_widget_set_size_request (label46_message, 49, 17);
 
   g_signal_connect ((gpointer) button1_validerAcceuil, "clicked",
                     G_CALLBACK (on_button1_validerAcceuil_clicked),
@@ -121,6 +127,7 @@ create_acceuil (void)
   GLADE_HOOKUP_OBJECT (acceuil, hbox1, "hbox1");
   GLADE_HOOKUP_OBJECT (acceuil, image3, "image3");
   GLADE_HOOKUP_OBJECT (acceuil, label3, "label3");
+  GLADE_HOOKUP_OBJECT (acceuil, label46_message, "label46_message");
 
   return acceuil;
 }

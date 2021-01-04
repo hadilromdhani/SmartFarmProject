@@ -1220,3 +1220,1127 @@ create_afficherTrp (void)
   return afficherTrp;
 }
 
+GtkWidget*
+create_gestionFK (void)
+{
+  GtkWidget *gestionFK;
+  GtkWidget *fixed8;
+  GtkWidget *image32;
+  GtkWidget *image33;
+  GtkWidget *label46;
+  GtkWidget *label47;
+  GtkWidget *modifierFK;
+  GtkWidget *alignment19;
+  GtkWidget *hbox19;
+  GtkWidget *image34;
+  GtkWidget *label48;
+  GtkWidget *ajouterFK;
+  GtkWidget *alignment20;
+  GtkWidget *hbox20;
+  GtkWidget *image35;
+  GtkWidget *label49;
+  GtkWidget *consulterFK;
+  GtkWidget *alignment21;
+  GtkWidget *hbox21;
+  GtkWidget *image36;
+  GtkWidget *label50;
+  GtkWidget *supprimerFK;
+  GtkWidget *alignment22;
+  GtkWidget *hbox22;
+  GtkWidget *image37;
+  GtkWidget *label51;
+  GtkWidget *rechercherFK;
+  GtkWidget *alignment23;
+  GtkWidget *hbox23;
+  GtkWidget *image38;
+  GtkWidget *label52;
+  GtkWidget *retourFK;
+  GtkWidget *alignment24;
+  GtkWidget *hbox24;
+  GtkWidget *image39;
+  GtkWidget *label53;
+
+  gestionFK = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (gestionFK), _("Gestion des plantes "));
+
+  fixed8 = gtk_fixed_new ();
+  gtk_widget_show (fixed8);
+  gtk_container_add (GTK_CONTAINER (gestionFK), fixed8);
+
+  image32 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image32);
+  gtk_fixed_put (GTK_FIXED (fixed8), image32, 24, 16);
+  gtk_widget_set_size_request (image32, 16, 16);
+
+  image33 = gtk_image_new_from_stock ("gtk-cancel", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image33);
+  gtk_fixed_put (GTK_FIXED (fixed8), image33, 328, 8);
+  gtk_widget_set_size_request (image33, 32, 32);
+
+  label46 = gtk_label_new (_("Acceuil "));
+  gtk_widget_show (label46);
+  gtk_fixed_put (GTK_FIXED (fixed8), label46, 40, 8);
+  gtk_widget_set_size_request (label46, 88, 32);
+
+  label47 = gtk_label_new (_("Gestion du calendrier de la plantation vegetale"));
+  gtk_widget_show (label47);
+  gtk_fixed_put (GTK_FIXED (fixed8), label47, 56, 40);
+  gtk_widget_set_size_request (label47, 312, 40);
+
+  modifierFK = gtk_button_new ();
+  gtk_widget_show (modifierFK);
+  gtk_fixed_put (GTK_FIXED (fixed8), modifierFK, 136, 88);
+  gtk_widget_set_size_request (modifierFK, 160, 32);
+
+  alignment19 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment19);
+  gtk_container_add (GTK_CONTAINER (modifierFK), alignment19);
+
+  hbox19 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox19);
+  gtk_container_add (GTK_CONTAINER (alignment19), hbox19);
+
+  image34 = gtk_image_new_from_stock ("gtk-edit", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image34);
+  gtk_box_pack_start (GTK_BOX (hbox19), image34, FALSE, FALSE, 0);
+
+  label48 = gtk_label_new_with_mnemonic (_("Modifier "));
+  gtk_widget_show (label48);
+  gtk_box_pack_start (GTK_BOX (hbox19), label48, FALSE, FALSE, 0);
+
+  ajouterFK = gtk_button_new ();
+  gtk_widget_show (ajouterFK);
+  gtk_fixed_put (GTK_FIXED (fixed8), ajouterFK, 136, 128);
+  gtk_widget_set_size_request (ajouterFK, 160, 32);
+
+  alignment20 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment20);
+  gtk_container_add (GTK_CONTAINER (ajouterFK), alignment20);
+
+  hbox20 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox20);
+  gtk_container_add (GTK_CONTAINER (alignment20), hbox20);
+
+  image35 = gtk_image_new_from_stock ("gtk-add", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image35);
+  gtk_box_pack_start (GTK_BOX (hbox20), image35, FALSE, FALSE, 0);
+
+  label49 = gtk_label_new_with_mnemonic (_("Ajouter "));
+  gtk_widget_show (label49);
+  gtk_box_pack_start (GTK_BOX (hbox20), label49, FALSE, FALSE, 0);
+
+  consulterFK = gtk_button_new ();
+  gtk_widget_show (consulterFK);
+  gtk_fixed_put (GTK_FIXED (fixed8), consulterFK, 136, 168);
+  gtk_widget_set_size_request (consulterFK, 160, 32);
+
+  alignment21 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment21);
+  gtk_container_add (GTK_CONTAINER (consulterFK), alignment21);
+
+  hbox21 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox21);
+  gtk_container_add (GTK_CONTAINER (alignment21), hbox21);
+
+  image36 = gtk_image_new_from_stock ("gtk-about", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image36);
+  gtk_box_pack_start (GTK_BOX (hbox21), image36, FALSE, FALSE, 0);
+
+  label50 = gtk_label_new_with_mnemonic (_("Consulter"));
+  gtk_widget_show (label50);
+  gtk_box_pack_start (GTK_BOX (hbox21), label50, FALSE, FALSE, 0);
+
+  supprimerFK = gtk_button_new ();
+  gtk_widget_show (supprimerFK);
+  gtk_fixed_put (GTK_FIXED (fixed8), supprimerFK, 136, 208);
+  gtk_widget_set_size_request (supprimerFK, 160, 32);
+
+  alignment22 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment22);
+  gtk_container_add (GTK_CONTAINER (supprimerFK), alignment22);
+
+  hbox22 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox22);
+  gtk_container_add (GTK_CONTAINER (alignment22), hbox22);
+
+  image37 = gtk_image_new_from_stock ("gtk-delete", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image37);
+  gtk_box_pack_start (GTK_BOX (hbox22), image37, FALSE, FALSE, 0);
+
+  label51 = gtk_label_new_with_mnemonic (_("supprimer"));
+  gtk_widget_show (label51);
+  gtk_box_pack_start (GTK_BOX (hbox22), label51, FALSE, FALSE, 0);
+
+  rechercherFK = gtk_button_new ();
+  gtk_widget_show (rechercherFK);
+  gtk_fixed_put (GTK_FIXED (fixed8), rechercherFK, 136, 248);
+  gtk_widget_set_size_request (rechercherFK, 160, 28);
+
+  alignment23 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment23);
+  gtk_container_add (GTK_CONTAINER (rechercherFK), alignment23);
+
+  hbox23 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox23);
+  gtk_container_add (GTK_CONTAINER (alignment23), hbox23);
+
+  image38 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image38);
+  gtk_box_pack_start (GTK_BOX (hbox23), image38, FALSE, FALSE, 0);
+
+  label52 = gtk_label_new_with_mnemonic (_("Rechercher"));
+  gtk_widget_show (label52);
+  gtk_box_pack_start (GTK_BOX (hbox23), label52, FALSE, FALSE, 0);
+
+  retourFK = gtk_button_new ();
+  gtk_widget_show (retourFK);
+  gtk_fixed_put (GTK_FIXED (fixed8), retourFK, 136, 280);
+  gtk_widget_set_size_request (retourFK, 160, 32);
+
+  alignment24 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment24);
+  gtk_container_add (GTK_CONTAINER (retourFK), alignment24);
+
+  hbox24 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox24);
+  gtk_container_add (GTK_CONTAINER (alignment24), hbox24);
+
+  image39 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image39);
+  gtk_box_pack_start (GTK_BOX (hbox24), image39, FALSE, FALSE, 0);
+
+  label53 = gtk_label_new_with_mnemonic (_("Retour"));
+  gtk_widget_show (label53);
+  gtk_box_pack_start (GTK_BOX (hbox24), label53, FALSE, FALSE, 0);
+
+  g_signal_connect ((gpointer) modifierFK, "clicked",
+                    G_CALLBACK (on_modifierFK_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) ajouterFK, "clicked",
+                    G_CALLBACK (on_ajouterFK_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) consulterFK, "clicked",
+                    G_CALLBACK (on_consulterFK_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) supprimerFK, "clicked",
+                    G_CALLBACK (on_supprimerFK_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) rechercherFK, "clicked",
+                    G_CALLBACK (on_rechercherFK_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) retourFK, "clicked",
+                    G_CALLBACK (on_retourFK_clicked),
+                    NULL);
+
+  /* Store pointers to all widgets, for use by lookup_widget(). */
+  GLADE_HOOKUP_OBJECT_NO_REF (gestionFK, gestionFK, "gestionFK");
+  GLADE_HOOKUP_OBJECT (gestionFK, fixed8, "fixed8");
+  GLADE_HOOKUP_OBJECT (gestionFK, image32, "image32");
+  GLADE_HOOKUP_OBJECT (gestionFK, image33, "image33");
+  GLADE_HOOKUP_OBJECT (gestionFK, label46, "label46");
+  GLADE_HOOKUP_OBJECT (gestionFK, label47, "label47");
+  GLADE_HOOKUP_OBJECT (gestionFK, modifierFK, "modifierFK");
+  GLADE_HOOKUP_OBJECT (gestionFK, alignment19, "alignment19");
+  GLADE_HOOKUP_OBJECT (gestionFK, hbox19, "hbox19");
+  GLADE_HOOKUP_OBJECT (gestionFK, image34, "image34");
+  GLADE_HOOKUP_OBJECT (gestionFK, label48, "label48");
+  GLADE_HOOKUP_OBJECT (gestionFK, ajouterFK, "ajouterFK");
+  GLADE_HOOKUP_OBJECT (gestionFK, alignment20, "alignment20");
+  GLADE_HOOKUP_OBJECT (gestionFK, hbox20, "hbox20");
+  GLADE_HOOKUP_OBJECT (gestionFK, image35, "image35");
+  GLADE_HOOKUP_OBJECT (gestionFK, label49, "label49");
+  GLADE_HOOKUP_OBJECT (gestionFK, consulterFK, "consulterFK");
+  GLADE_HOOKUP_OBJECT (gestionFK, alignment21, "alignment21");
+  GLADE_HOOKUP_OBJECT (gestionFK, hbox21, "hbox21");
+  GLADE_HOOKUP_OBJECT (gestionFK, image36, "image36");
+  GLADE_HOOKUP_OBJECT (gestionFK, label50, "label50");
+  GLADE_HOOKUP_OBJECT (gestionFK, supprimerFK, "supprimerFK");
+  GLADE_HOOKUP_OBJECT (gestionFK, alignment22, "alignment22");
+  GLADE_HOOKUP_OBJECT (gestionFK, hbox22, "hbox22");
+  GLADE_HOOKUP_OBJECT (gestionFK, image37, "image37");
+  GLADE_HOOKUP_OBJECT (gestionFK, label51, "label51");
+  GLADE_HOOKUP_OBJECT (gestionFK, rechercherFK, "rechercherFK");
+  GLADE_HOOKUP_OBJECT (gestionFK, alignment23, "alignment23");
+  GLADE_HOOKUP_OBJECT (gestionFK, hbox23, "hbox23");
+  GLADE_HOOKUP_OBJECT (gestionFK, image38, "image38");
+  GLADE_HOOKUP_OBJECT (gestionFK, label52, "label52");
+  GLADE_HOOKUP_OBJECT (gestionFK, retourFK, "retourFK");
+  GLADE_HOOKUP_OBJECT (gestionFK, alignment24, "alignment24");
+  GLADE_HOOKUP_OBJECT (gestionFK, hbox24, "hbox24");
+  GLADE_HOOKUP_OBJECT (gestionFK, image39, "image39");
+  GLADE_HOOKUP_OBJECT (gestionFK, label53, "label53");
+
+  return gestionFK;
+}
+
+GtkWidget*
+create_ajouterFK (void)
+{
+  GtkWidget *ajouterFK;
+  GtkWidget *fixed9;
+  GtkWidget *entry1_dateFertilisation;
+  GtkWidget *entry2_datePlantation;
+  GtkWidget *entry3_idPlante;
+  GtkWidget *entry4_quantite;
+  GtkObject *spinbutton1_quantite_adj;
+  GtkWidget *spinbutton1_quantite;
+  GtkWidget *label56;
+  GtkWidget *label57;
+  GtkWidget *label58;
+  GtkWidget *label59;
+  GtkWidget *label61;
+  GtkWidget *label54;
+  GtkWidget *label55;
+  GtkWidget *radiobutton1_legumes;
+  GSList *radiobutton1_legumes_group = NULL;
+  GtkWidget *radiobutton2_fruit;
+  GSList *radiobutton2_fruit_group = NULL;
+  GtkWidget *combobox1_nomPlante;
+  GtkWidget *combobox2_typePlante;
+  GtkWidget *label60;
+  GtkWidget *checkbutton1_emA;
+  GtkWidget *checkbutton2_emB;
+  GtkWidget *checkbutton3_emC;
+  GtkWidget *button7_confirmerAjout;
+  GtkWidget *alignment25;
+  GtkWidget *hbox25;
+  GtkWidget *image40;
+  GtkWidget *label62;
+  GtkWidget *button8_retourAjout;
+  GtkWidget *alignment26;
+  GtkWidget *hbox26;
+  GtkWidget *image41;
+  GtkWidget *label63;
+
+  ajouterFK = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (ajouterFK), _("Ajouter une plante"));
+
+  fixed9 = gtk_fixed_new ();
+  gtk_widget_show (fixed9);
+  gtk_container_add (GTK_CONTAINER (ajouterFK), fixed9);
+
+  entry1_dateFertilisation = gtk_entry_new ();
+  gtk_widget_show (entry1_dateFertilisation);
+  gtk_fixed_put (GTK_FIXED (fixed9), entry1_dateFertilisation, 216, 248);
+  gtk_widget_set_size_request (entry1_dateFertilisation, 168, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry1_dateFertilisation), 8226);
+
+  entry2_datePlantation = gtk_entry_new ();
+  gtk_widget_show (entry2_datePlantation);
+  gtk_fixed_put (GTK_FIXED (fixed9), entry2_datePlantation, 216, 200);
+  gtk_widget_set_size_request (entry2_datePlantation, 168, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry2_datePlantation), 8226);
+
+  entry3_idPlante = gtk_entry_new ();
+  gtk_widget_show (entry3_idPlante);
+  gtk_fixed_put (GTK_FIXED (fixed9), entry3_idPlante, 216, 304);
+  gtk_widget_set_size_request (entry3_idPlante, 168, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry3_idPlante), 8226);
+
+  entry4_quantite = gtk_entry_new ();
+  gtk_widget_show (entry4_quantite);
+  gtk_fixed_put (GTK_FIXED (fixed9), entry4_quantite, 224, 416);
+  gtk_widget_set_size_request (entry4_quantite, 160, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry4_quantite), 8226);
+
+  spinbutton1_quantite_adj = gtk_adjustment_new (1, 0, 100, 1, 10, 10);
+  spinbutton1_quantite = gtk_spin_button_new (GTK_ADJUSTMENT (spinbutton1_quantite_adj), 1, 0);
+  gtk_widget_show (spinbutton1_quantite);
+  gtk_fixed_put (GTK_FIXED (fixed9), spinbutton1_quantite, 232, 448);
+  gtk_widget_set_size_request (spinbutton1_quantite, 60, 27);
+
+  label56 = gtk_label_new (_("Type de la plante"));
+  gtk_widget_show (label56);
+  gtk_fixed_put (GTK_FIXED (fixed9), label56, 40, 160);
+  gtk_widget_set_size_request (label56, 136, 24);
+
+  label57 = gtk_label_new (_("Date de plantation"));
+  gtk_widget_show (label57);
+  gtk_fixed_put (GTK_FIXED (fixed9), label57, 40, 200);
+  gtk_widget_set_size_request (label57, 144, 32);
+
+  label58 = gtk_label_new (_("Date de fertilisation"));
+  gtk_widget_show (label58);
+  gtk_fixed_put (GTK_FIXED (fixed9), label58, 32, 256);
+  gtk_widget_set_size_request (label58, 152, 24);
+
+  label59 = gtk_label_new (_("Identifiant de la plante"));
+  gtk_widget_show (label59);
+  gtk_fixed_put (GTK_FIXED (fixed9), label59, 32, 304);
+  gtk_widget_set_size_request (label59, 168, 32);
+
+  label61 = gtk_label_new (_("Quantite"));
+  gtk_widget_show (label61);
+  gtk_fixed_put (GTK_FIXED (fixed9), label61, 72, 424);
+  gtk_widget_set_size_request (label61, 72, 24);
+
+  label54 = gtk_label_new (_("Pour ajouter une plante, Tapez les informations suivantes :"));
+  gtk_widget_show (label54);
+  gtk_fixed_put (GTK_FIXED (fixed9), label54, 32, 32);
+  gtk_widget_set_size_request (label54, 392, 32);
+
+  label55 = gtk_label_new (_("Nom de la plante "));
+  gtk_widget_show (label55);
+  gtk_fixed_put (GTK_FIXED (fixed9), label55, 40, 112);
+  gtk_widget_set_size_request (label55, 136, 24);
+
+  radiobutton1_legumes = gtk_radio_button_new_with_mnemonic (NULL, _("Legumes"));
+  gtk_widget_show (radiobutton1_legumes);
+  gtk_fixed_put (GTK_FIXED (fixed9), radiobutton1_legumes, 120, 72);
+  gtk_widget_set_size_request (radiobutton1_legumes, 116, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobutton1_legumes), radiobutton1_legumes_group);
+  radiobutton1_legumes_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobutton1_legumes));
+
+  radiobutton2_fruit = gtk_radio_button_new_with_mnemonic (NULL, _("Fruits"));
+  gtk_widget_show (radiobutton2_fruit);
+  gtk_fixed_put (GTK_FIXED (fixed9), radiobutton2_fruit, 256, 72);
+  gtk_widget_set_size_request (radiobutton2_fruit, 116, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobutton2_fruit), radiobutton2_fruit_group);
+  radiobutton2_fruit_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobutton2_fruit));
+
+  combobox1_nomPlante = gtk_combo_box_new_text ();
+  gtk_widget_show (combobox1_nomPlante);
+  gtk_fixed_put (GTK_FIXED (fixed9), combobox1_nomPlante, 216, 104);
+  gtk_widget_set_size_request (combobox1_nomPlante, 168, 32);
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox1_nomPlante), _("fraise"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox1_nomPlante), _("pomme"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox1_nomPlante), _("banane"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox1_nomPlante), _("poivre"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox1_nomPlante), _("olive"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox1_nomPlante), _("onion"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox1_nomPlante), _("pomme_de_terre"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox1_nomPlante), _("tomate"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox1_nomPlante), _("betterave"));
+
+  combobox2_typePlante = gtk_combo_box_new_text ();
+  gtk_widget_show (combobox2_typePlante);
+  gtk_fixed_put (GTK_FIXED (fixed9), combobox2_typePlante, 216, 152);
+  gtk_widget_set_size_request (combobox2_typePlante, 168, 32);
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox2_typePlante), _(" arbustes"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox2_typePlante), _(" arbres"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox2_typePlante), _("plantes_grimpantes"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox2_typePlante), _("llianes"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox2_typePlante), _("plantes_bulbeuses"));
+
+  label60 = gtk_label_new (_("Emplacement de la plante"));
+  gtk_widget_show (label60);
+  gtk_fixed_put (GTK_FIXED (fixed9), label60, 8, 368);
+  gtk_widget_set_size_request (label60, 200, 32);
+
+  checkbutton1_emA = gtk_check_button_new_with_mnemonic (_("A"));
+  gtk_widget_show (checkbutton1_emA);
+  gtk_fixed_put (GTK_FIXED (fixed9), checkbutton1_emA, 232, 368);
+  gtk_widget_set_size_request (checkbutton1_emA, 118, 24);
+
+  checkbutton2_emB = gtk_check_button_new_with_mnemonic (_("B"));
+  gtk_widget_show (checkbutton2_emB);
+  gtk_fixed_put (GTK_FIXED (fixed9), checkbutton2_emB, 344, 367);
+  gtk_widget_set_size_request (checkbutton2_emB, 104, 25);
+
+  checkbutton3_emC = gtk_check_button_new_with_mnemonic (_("C"));
+  gtk_widget_show (checkbutton3_emC);
+  gtk_fixed_put (GTK_FIXED (fixed9), checkbutton3_emC, 448, 366);
+  gtk_widget_set_size_request (checkbutton3_emC, 118, 24);
+
+  button7_confirmerAjout = gtk_button_new ();
+  gtk_widget_show (button7_confirmerAjout);
+  gtk_fixed_put (GTK_FIXED (fixed9), button7_confirmerAjout, 96, 488);
+  gtk_widget_set_size_request (button7_confirmerAjout, 128, 32);
+
+  alignment25 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment25);
+  gtk_container_add (GTK_CONTAINER (button7_confirmerAjout), alignment25);
+
+  hbox25 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox25);
+  gtk_container_add (GTK_CONTAINER (alignment25), hbox25);
+
+  image40 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image40);
+  gtk_box_pack_start (GTK_BOX (hbox25), image40, FALSE, FALSE, 0);
+
+  label62 = gtk_label_new_with_mnemonic (_("Confirmer"));
+  gtk_widget_show (label62);
+  gtk_box_pack_start (GTK_BOX (hbox25), label62, FALSE, FALSE, 0);
+
+  button8_retourAjout = gtk_button_new ();
+  gtk_widget_show (button8_retourAjout);
+  gtk_fixed_put (GTK_FIXED (fixed9), button8_retourAjout, 280, 488);
+  gtk_widget_set_size_request (button8_retourAjout, 128, 32);
+
+  alignment26 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment26);
+  gtk_container_add (GTK_CONTAINER (button8_retourAjout), alignment26);
+
+  hbox26 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox26);
+  gtk_container_add (GTK_CONTAINER (alignment26), hbox26);
+
+  image41 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image41);
+  gtk_box_pack_start (GTK_BOX (hbox26), image41, FALSE, FALSE, 0);
+
+  label63 = gtk_label_new_with_mnemonic (_("Retour"));
+  gtk_widget_show (label63);
+  gtk_box_pack_start (GTK_BOX (hbox26), label63, FALSE, FALSE, 0);
+
+  g_signal_connect ((gpointer) radiobutton1_legumes, "toggled",
+                    G_CALLBACK (on_radiobutton1_legumes_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) radiobutton2_fruit, "toggled",
+                    G_CALLBACK (on_radiobutton2_fruit_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) checkbutton1_emA, "toggled",
+                    G_CALLBACK (on_checkbutton1_emA_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) checkbutton2_emB, "toggled",
+                    G_CALLBACK (on_checkbutton2_emB_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) checkbutton3_emC, "toggled",
+                    G_CALLBACK (on_checkbutton3_emC_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) button7_confirmerAjout, "clicked",
+                    G_CALLBACK (on_button7_confirmerAjout_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) button8_retourAjout, "clicked",
+                    G_CALLBACK (on_button8_retourAjout_clicked),
+                    NULL);
+
+  /* Store pointers to all widgets, for use by lookup_widget(). */
+  GLADE_HOOKUP_OBJECT_NO_REF (ajouterFK, ajouterFK, "ajouterFK");
+  GLADE_HOOKUP_OBJECT (ajouterFK, fixed9, "fixed9");
+  GLADE_HOOKUP_OBJECT (ajouterFK, entry1_dateFertilisation, "entry1_dateFertilisation");
+  GLADE_HOOKUP_OBJECT (ajouterFK, entry2_datePlantation, "entry2_datePlantation");
+  GLADE_HOOKUP_OBJECT (ajouterFK, entry3_idPlante, "entry3_idPlante");
+  GLADE_HOOKUP_OBJECT (ajouterFK, entry4_quantite, "entry4_quantite");
+  GLADE_HOOKUP_OBJECT (ajouterFK, spinbutton1_quantite, "spinbutton1_quantite");
+  GLADE_HOOKUP_OBJECT (ajouterFK, label56, "label56");
+  GLADE_HOOKUP_OBJECT (ajouterFK, label57, "label57");
+  GLADE_HOOKUP_OBJECT (ajouterFK, label58, "label58");
+  GLADE_HOOKUP_OBJECT (ajouterFK, label59, "label59");
+  GLADE_HOOKUP_OBJECT (ajouterFK, label61, "label61");
+  GLADE_HOOKUP_OBJECT (ajouterFK, label54, "label54");
+  GLADE_HOOKUP_OBJECT (ajouterFK, label55, "label55");
+  GLADE_HOOKUP_OBJECT (ajouterFK, radiobutton1_legumes, "radiobutton1_legumes");
+  GLADE_HOOKUP_OBJECT (ajouterFK, radiobutton2_fruit, "radiobutton2_fruit");
+  GLADE_HOOKUP_OBJECT (ajouterFK, combobox1_nomPlante, "combobox1_nomPlante");
+  GLADE_HOOKUP_OBJECT (ajouterFK, combobox2_typePlante, "combobox2_typePlante");
+  GLADE_HOOKUP_OBJECT (ajouterFK, label60, "label60");
+  GLADE_HOOKUP_OBJECT (ajouterFK, checkbutton1_emA, "checkbutton1_emA");
+  GLADE_HOOKUP_OBJECT (ajouterFK, checkbutton2_emB, "checkbutton2_emB");
+  GLADE_HOOKUP_OBJECT (ajouterFK, checkbutton3_emC, "checkbutton3_emC");
+  GLADE_HOOKUP_OBJECT (ajouterFK, button7_confirmerAjout, "button7_confirmerAjout");
+  GLADE_HOOKUP_OBJECT (ajouterFK, alignment25, "alignment25");
+  GLADE_HOOKUP_OBJECT (ajouterFK, hbox25, "hbox25");
+  GLADE_HOOKUP_OBJECT (ajouterFK, image40, "image40");
+  GLADE_HOOKUP_OBJECT (ajouterFK, label62, "label62");
+  GLADE_HOOKUP_OBJECT (ajouterFK, button8_retourAjout, "button8_retourAjout");
+  GLADE_HOOKUP_OBJECT (ajouterFK, alignment26, "alignment26");
+  GLADE_HOOKUP_OBJECT (ajouterFK, hbox26, "hbox26");
+  GLADE_HOOKUP_OBJECT (ajouterFK, image41, "image41");
+  GLADE_HOOKUP_OBJECT (ajouterFK, label63, "label63");
+
+  return ajouterFK;
+}
+
+GtkWidget*
+create_modifierFK (void)
+{
+  GtkWidget *modifierFK;
+  GtkWidget *fixed10;
+  GtkWidget *entry5_datePlantation;
+  GtkWidget *entry6_idPlante;
+  GtkWidget *image42;
+  GtkWidget *entry7_dateFertilisation;
+  GtkWidget *label64;
+  GtkWidget *entry8_quantite;
+  GtkObject *spinbutton2_quantite_adj;
+  GtkWidget *spinbutton2_quantite;
+  GtkWidget *image43;
+  GtkWidget *label66;
+  GtkWidget *label67;
+  GtkWidget *label68;
+  GtkWidget *label69;
+  GtkWidget *label70;
+  GtkWidget *label72;
+  GtkWidget *label73;
+  GtkWidget *radiobutton3_legumeModif;
+  GSList *radiobutton3_legumeModif_group = NULL;
+  GtkWidget *radiobutton4_fruitModif;
+  GtkWidget *combobox3_nomPlante;
+  GtkWidget *combobox4_typePlante;
+  GtkWidget *checkbutton4emAmodif;
+  GtkWidget *checkbutton5_emBmodif;
+  GtkWidget *checkbutton6_emCmodif;
+  GtkWidget *button9_confirmerModif;
+  GtkWidget *alignment27;
+  GtkWidget *hbox27;
+  GtkWidget *image44;
+  GtkWidget *label65;
+  GtkWidget *button10_retourModif;
+  GtkWidget *alignment28;
+  GtkWidget *hbox28;
+  GtkWidget *image45;
+  GtkWidget *label71;
+
+  modifierFK = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (modifierFK), _("Modifier "));
+
+  fixed10 = gtk_fixed_new ();
+  gtk_widget_show (fixed10);
+  gtk_container_add (GTK_CONTAINER (modifierFK), fixed10);
+
+  entry5_datePlantation = gtk_entry_new ();
+  gtk_widget_show (entry5_datePlantation);
+  gtk_fixed_put (GTK_FIXED (fixed10), entry5_datePlantation, 192, 160);
+  gtk_widget_set_size_request (entry5_datePlantation, 184, 32);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry5_datePlantation), 8226);
+
+  entry6_idPlante = gtk_entry_new ();
+  gtk_widget_show (entry6_idPlante);
+  gtk_fixed_put (GTK_FIXED (fixed10), entry6_idPlante, 192, 240);
+  gtk_widget_set_size_request (entry6_idPlante, 184, 32);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry6_idPlante), 8226);
+
+  image42 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image42);
+  gtk_fixed_put (GTK_FIXED (fixed10), image42, 16, 16);
+  gtk_widget_set_size_request (image42, 21, 21);
+
+  entry7_dateFertilisation = gtk_entry_new ();
+  gtk_widget_show (entry7_dateFertilisation);
+  gtk_fixed_put (GTK_FIXED (fixed10), entry7_dateFertilisation, 192, 200);
+  gtk_widget_set_size_request (entry7_dateFertilisation, 184, 35);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry7_dateFertilisation), 8226);
+
+  label64 = gtk_label_new ("");
+  gtk_widget_show (label64);
+  gtk_fixed_put (GTK_FIXED (fixed10), label64, 280, 352);
+  gtk_widget_set_size_request (label64, 144, 24);
+
+  entry8_quantite = gtk_entry_new ();
+  gtk_widget_show (entry8_quantite);
+  gtk_fixed_put (GTK_FIXED (fixed10), entry8_quantite, 200, 344);
+  gtk_widget_set_size_request (entry8_quantite, 160, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry8_quantite), 8226);
+
+  spinbutton2_quantite_adj = gtk_adjustment_new (1, 0, 100, 1, 10, 10);
+  spinbutton2_quantite = gtk_spin_button_new (GTK_ADJUSTMENT (spinbutton2_quantite_adj), 1, 0);
+  gtk_widget_show (spinbutton2_quantite);
+  gtk_fixed_put (GTK_FIXED (fixed10), spinbutton2_quantite, 232, 392);
+  gtk_widget_set_size_request (spinbutton2_quantite, 60, 27);
+
+  image43 = gtk_image_new_from_stock ("gtk-close", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image43);
+  gtk_fixed_put (GTK_FIXED (fixed10), image43, 696, 8);
+  gtk_widget_set_size_request (image43, 21, 21);
+
+  label66 = gtk_label_new (_("Nom de la plante"));
+  gtk_widget_show (label66);
+  gtk_fixed_put (GTK_FIXED (fixed10), label66, 16, 88);
+  gtk_widget_set_size_request (label66, 136, 24);
+
+  label67 = gtk_label_new (_("Type de la plante "));
+  gtk_widget_show (label67);
+  gtk_fixed_put (GTK_FIXED (fixed10), label67, 24, 120);
+  gtk_widget_set_size_request (label67, 128, 32);
+
+  label68 = gtk_label_new (_("Date de plantation"));
+  gtk_widget_show (label68);
+  gtk_fixed_put (GTK_FIXED (fixed10), label68, 16, 160);
+  gtk_widget_set_size_request (label68, 144, 40);
+
+  label69 = gtk_label_new (_("Date de fertilisation"));
+  gtk_widget_show (label69);
+  gtk_fixed_put (GTK_FIXED (fixed10), label69, 24, 208);
+  gtk_widget_set_size_request (label69, 136, 24);
+
+  label70 = gtk_label_new (_("Identifiant de la plante"));
+  gtk_widget_show (label70);
+  gtk_fixed_put (GTK_FIXED (fixed10), label70, 24, 248);
+  gtk_widget_set_size_request (label70, 160, 24);
+
+  label72 = gtk_label_new (_("Quantite"));
+  gtk_widget_show (label72);
+  gtk_fixed_put (GTK_FIXED (fixed10), label72, 56, 344);
+  gtk_widget_set_size_request (label72, 88, 32);
+
+  label73 = gtk_label_new (_("Emplacement de la plante"));
+  gtk_widget_show (label73);
+  gtk_fixed_put (GTK_FIXED (fixed10), label73, 0, 280);
+  gtk_widget_set_size_request (label73, 200, 64);
+
+  radiobutton3_legumeModif = gtk_radio_button_new_with_mnemonic (NULL, _("Legumes"));
+  gtk_widget_show (radiobutton3_legumeModif);
+  gtk_fixed_put (GTK_FIXED (fixed10), radiobutton3_legumeModif, 88, 40);
+  gtk_widget_set_size_request (radiobutton3_legumeModif, 116, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobutton3_legumeModif), radiobutton3_legumeModif_group);
+  radiobutton3_legumeModif_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobutton3_legumeModif));
+
+  radiobutton4_fruitModif = gtk_radio_button_new_with_mnemonic (NULL, _("Fruits"));
+  gtk_widget_show (radiobutton4_fruitModif);
+  gtk_fixed_put (GTK_FIXED (fixed10), radiobutton4_fruitModif, 200, 40);
+  gtk_widget_set_size_request (radiobutton4_fruitModif, 116, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobutton4_fruitModif), radiobutton3_legumeModif_group);
+  radiobutton3_legumeModif_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobutton4_fruitModif));
+
+  combobox3_nomPlante = gtk_combo_box_new_text ();
+  gtk_widget_show (combobox3_nomPlante);
+  gtk_fixed_put (GTK_FIXED (fixed10), combobox3_nomPlante, 192, 80);
+  gtk_widget_set_size_request (combobox3_nomPlante, 184, 32);
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox3_nomPlante), _("fraise"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox3_nomPlante), _("pomme"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox3_nomPlante), _("banane"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox3_nomPlante), _("poivre"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox3_nomPlante), _("olive"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox3_nomPlante), _("onion"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox3_nomPlante), _("pomme de terre"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox3_nomPlante), _("tomate"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox3_nomPlante), _("betterave"));
+
+  combobox4_typePlante = gtk_combo_box_new_text ();
+  gtk_widget_show (combobox4_typePlante);
+  gtk_fixed_put (GTK_FIXED (fixed10), combobox4_typePlante, 192, 120);
+  gtk_widget_set_size_request (combobox4_typePlante, 184, 32);
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox4_typePlante), _(" arbustes"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox4_typePlante), _(" arbres"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox4_typePlante), _("plantes_grimpantes"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox4_typePlante), _("llianes"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox4_typePlante), _("plantes_bulbeuses"));
+
+  checkbutton4emAmodif = gtk_check_button_new_with_mnemonic (_("A"));
+  gtk_widget_show (checkbutton4emAmodif);
+  gtk_fixed_put (GTK_FIXED (fixed10), checkbutton4emAmodif, 192, 296);
+  gtk_widget_set_size_request (checkbutton4emAmodif, 64, 32);
+
+  checkbutton5_emBmodif = gtk_check_button_new_with_mnemonic (_("B"));
+  gtk_widget_show (checkbutton5_emBmodif);
+  gtk_fixed_put (GTK_FIXED (fixed10), checkbutton5_emBmodif, 240, 297);
+  gtk_widget_set_size_request (checkbutton5_emBmodif, 72, 29);
+
+  checkbutton6_emCmodif = gtk_check_button_new_with_mnemonic (_("C"));
+  gtk_widget_show (checkbutton6_emCmodif);
+  gtk_fixed_put (GTK_FIXED (fixed10), checkbutton6_emCmodif, 304, 298);
+  gtk_widget_set_size_request (checkbutton6_emCmodif, 118, 24);
+
+  button9_confirmerModif = gtk_button_new ();
+  gtk_widget_show (button9_confirmerModif);
+  gtk_fixed_put (GTK_FIXED (fixed10), button9_confirmerModif, 96, 440);
+  gtk_widget_set_size_request (button9_confirmerModif, 106, 29);
+
+  alignment27 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment27);
+  gtk_container_add (GTK_CONTAINER (button9_confirmerModif), alignment27);
+
+  hbox27 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox27);
+  gtk_container_add (GTK_CONTAINER (alignment27), hbox27);
+
+  image44 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image44);
+  gtk_box_pack_start (GTK_BOX (hbox27), image44, FALSE, FALSE, 0);
+
+  label65 = gtk_label_new_with_mnemonic (_("Confirmer"));
+  gtk_widget_show (label65);
+  gtk_box_pack_start (GTK_BOX (hbox27), label65, FALSE, FALSE, 0);
+
+  button10_retourModif = gtk_button_new ();
+  gtk_widget_show (button10_retourModif);
+  gtk_fixed_put (GTK_FIXED (fixed10), button10_retourModif, 232, 438);
+  gtk_widget_set_size_request (button10_retourModif, 120, 32);
+
+  alignment28 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment28);
+  gtk_container_add (GTK_CONTAINER (button10_retourModif), alignment28);
+
+  hbox28 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox28);
+  gtk_container_add (GTK_CONTAINER (alignment28), hbox28);
+
+  image45 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image45);
+  gtk_box_pack_start (GTK_BOX (hbox28), image45, FALSE, FALSE, 0);
+
+  label71 = gtk_label_new_with_mnemonic (_("Retour"));
+  gtk_widget_show (label71);
+  gtk_box_pack_start (GTK_BOX (hbox28), label71, FALSE, FALSE, 0);
+
+  g_signal_connect ((gpointer) radiobutton3_legumeModif, "toggled",
+                    G_CALLBACK (on_radiobutton3_legumeModif_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) radiobutton4_fruitModif, "toggled",
+                    G_CALLBACK (on_radiobutton4_fruitModif_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) checkbutton4emAmodif, "toggled",
+                    G_CALLBACK (on_checkbutton4emAmodif_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) checkbutton5_emBmodif, "toggled",
+                    G_CALLBACK (on_checkbutton5_emBmodif_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) checkbutton6_emCmodif, "toggled",
+                    G_CALLBACK (on_checkbutton6_emCmodif_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) button9_confirmerModif, "clicked",
+                    G_CALLBACK (on_button9_confirmerModif_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) button10_retourModif, "clicked",
+                    G_CALLBACK (on_button10_retourModif_clicked),
+                    NULL);
+
+  /* Store pointers to all widgets, for use by lookup_widget(). */
+  GLADE_HOOKUP_OBJECT_NO_REF (modifierFK, modifierFK, "modifierFK");
+  GLADE_HOOKUP_OBJECT (modifierFK, fixed10, "fixed10");
+  GLADE_HOOKUP_OBJECT (modifierFK, entry5_datePlantation, "entry5_datePlantation");
+  GLADE_HOOKUP_OBJECT (modifierFK, entry6_idPlante, "entry6_idPlante");
+  GLADE_HOOKUP_OBJECT (modifierFK, image42, "image42");
+  GLADE_HOOKUP_OBJECT (modifierFK, entry7_dateFertilisation, "entry7_dateFertilisation");
+  GLADE_HOOKUP_OBJECT (modifierFK, label64, "label64");
+  GLADE_HOOKUP_OBJECT (modifierFK, entry8_quantite, "entry8_quantite");
+  GLADE_HOOKUP_OBJECT (modifierFK, spinbutton2_quantite, "spinbutton2_quantite");
+  GLADE_HOOKUP_OBJECT (modifierFK, image43, "image43");
+  GLADE_HOOKUP_OBJECT (modifierFK, label66, "label66");
+  GLADE_HOOKUP_OBJECT (modifierFK, label67, "label67");
+  GLADE_HOOKUP_OBJECT (modifierFK, label68, "label68");
+  GLADE_HOOKUP_OBJECT (modifierFK, label69, "label69");
+  GLADE_HOOKUP_OBJECT (modifierFK, label70, "label70");
+  GLADE_HOOKUP_OBJECT (modifierFK, label72, "label72");
+  GLADE_HOOKUP_OBJECT (modifierFK, label73, "label73");
+  GLADE_HOOKUP_OBJECT (modifierFK, radiobutton3_legumeModif, "radiobutton3_legumeModif");
+  GLADE_HOOKUP_OBJECT (modifierFK, radiobutton4_fruitModif, "radiobutton4_fruitModif");
+  GLADE_HOOKUP_OBJECT (modifierFK, combobox3_nomPlante, "combobox3_nomPlante");
+  GLADE_HOOKUP_OBJECT (modifierFK, combobox4_typePlante, "combobox4_typePlante");
+  GLADE_HOOKUP_OBJECT (modifierFK, checkbutton4emAmodif, "checkbutton4emAmodif");
+  GLADE_HOOKUP_OBJECT (modifierFK, checkbutton5_emBmodif, "checkbutton5_emBmodif");
+  GLADE_HOOKUP_OBJECT (modifierFK, checkbutton6_emCmodif, "checkbutton6_emCmodif");
+  GLADE_HOOKUP_OBJECT (modifierFK, button9_confirmerModif, "button9_confirmerModif");
+  GLADE_HOOKUP_OBJECT (modifierFK, alignment27, "alignment27");
+  GLADE_HOOKUP_OBJECT (modifierFK, hbox27, "hbox27");
+  GLADE_HOOKUP_OBJECT (modifierFK, image44, "image44");
+  GLADE_HOOKUP_OBJECT (modifierFK, label65, "label65");
+  GLADE_HOOKUP_OBJECT (modifierFK, button10_retourModif, "button10_retourModif");
+  GLADE_HOOKUP_OBJECT (modifierFK, alignment28, "alignment28");
+  GLADE_HOOKUP_OBJECT (modifierFK, hbox28, "hbox28");
+  GLADE_HOOKUP_OBJECT (modifierFK, image45, "image45");
+  GLADE_HOOKUP_OBJECT (modifierFK, label71, "label71");
+
+  return modifierFK;
+}
+
+GtkWidget*
+create_supprimerFK (void)
+{
+  GtkWidget *supprimerFK;
+  GtkWidget *fixed11;
+  GtkWidget *entry9_idPlante;
+  GtkWidget *label76;
+  GtkWidget *button11_supprimerSupp;
+  GtkWidget *alignment29;
+  GtkWidget *hbox29;
+  GtkWidget *image46;
+  GtkWidget *label74;
+  GtkWidget *button12_retourSupp;
+  GtkWidget *alignment30;
+  GtkWidget *hbox30;
+  GtkWidget *image47;
+  GtkWidget *label75;
+
+  supprimerFK = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (supprimerFK), _("supprimer"));
+
+  fixed11 = gtk_fixed_new ();
+  gtk_widget_show (fixed11);
+  gtk_container_add (GTK_CONTAINER (supprimerFK), fixed11);
+
+  entry9_idPlante = gtk_entry_new ();
+  gtk_widget_show (entry9_idPlante);
+  gtk_fixed_put (GTK_FIXED (fixed11), entry9_idPlante, 216, 192);
+  gtk_widget_set_size_request (entry9_idPlante, 160, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry9_idPlante), 8226);
+
+  label76 = gtk_label_new (_("Identifiant de la plante"));
+  gtk_widget_show (label76);
+  gtk_fixed_put (GTK_FIXED (fixed11), label76, 24, 198);
+  gtk_widget_set_size_request (label76, 184, 24);
+
+  button11_supprimerSupp = gtk_button_new ();
+  gtk_widget_show (button11_supprimerSupp);
+  gtk_fixed_put (GTK_FIXED (fixed11), button11_supprimerSupp, 64, 256);
+  gtk_widget_set_size_request (button11_supprimerSupp, 112, 40);
+
+  alignment29 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment29);
+  gtk_container_add (GTK_CONTAINER (button11_supprimerSupp), alignment29);
+
+  hbox29 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox29);
+  gtk_container_add (GTK_CONTAINER (alignment29), hbox29);
+
+  image46 = gtk_image_new_from_stock ("gtk-cancel", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image46);
+  gtk_box_pack_start (GTK_BOX (hbox29), image46, FALSE, FALSE, 0);
+
+  label74 = gtk_label_new_with_mnemonic (_("supprimer"));
+  gtk_widget_show (label74);
+  gtk_box_pack_start (GTK_BOX (hbox29), label74, FALSE, FALSE, 0);
+
+  button12_retourSupp = gtk_button_new ();
+  gtk_widget_show (button12_retourSupp);
+  gtk_fixed_put (GTK_FIXED (fixed11), button12_retourSupp, 216, 256);
+  gtk_widget_set_size_request (button12_retourSupp, 96, 40);
+
+  alignment30 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment30);
+  gtk_container_add (GTK_CONTAINER (button12_retourSupp), alignment30);
+
+  hbox30 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox30);
+  gtk_container_add (GTK_CONTAINER (alignment30), hbox30);
+
+  image47 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image47);
+  gtk_box_pack_start (GTK_BOX (hbox30), image47, FALSE, FALSE, 0);
+
+  label75 = gtk_label_new_with_mnemonic (_("Retour"));
+  gtk_widget_show (label75);
+  gtk_box_pack_start (GTK_BOX (hbox30), label75, FALSE, FALSE, 0);
+
+  g_signal_connect ((gpointer) button11_supprimerSupp, "clicked",
+                    G_CALLBACK (on_button11_supprimerSupp_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) button12_retourSupp, "clicked",
+                    G_CALLBACK (on_button12_retourSupp_clicked),
+                    NULL);
+
+  /* Store pointers to all widgets, for use by lookup_widget(). */
+  GLADE_HOOKUP_OBJECT_NO_REF (supprimerFK, supprimerFK, "supprimerFK");
+  GLADE_HOOKUP_OBJECT (supprimerFK, fixed11, "fixed11");
+  GLADE_HOOKUP_OBJECT (supprimerFK, entry9_idPlante, "entry9_idPlante");
+  GLADE_HOOKUP_OBJECT (supprimerFK, label76, "label76");
+  GLADE_HOOKUP_OBJECT (supprimerFK, button11_supprimerSupp, "button11_supprimerSupp");
+  GLADE_HOOKUP_OBJECT (supprimerFK, alignment29, "alignment29");
+  GLADE_HOOKUP_OBJECT (supprimerFK, hbox29, "hbox29");
+  GLADE_HOOKUP_OBJECT (supprimerFK, image46, "image46");
+  GLADE_HOOKUP_OBJECT (supprimerFK, label74, "label74");
+  GLADE_HOOKUP_OBJECT (supprimerFK, button12_retourSupp, "button12_retourSupp");
+  GLADE_HOOKUP_OBJECT (supprimerFK, alignment30, "alignment30");
+  GLADE_HOOKUP_OBJECT (supprimerFK, hbox30, "hbox30");
+  GLADE_HOOKUP_OBJECT (supprimerFK, image47, "image47");
+  GLADE_HOOKUP_OBJECT (supprimerFK, label75, "label75");
+
+  return supprimerFK;
+}
+
+GtkWidget*
+create_rechercherFK (void)
+{
+  GtkWidget *rechercherFK;
+  GtkWidget *fixed12;
+  GtkWidget *entry10_idPlante;
+  GtkWidget *label77;
+  GtkWidget *button13_rechercherRech;
+  GtkWidget *alignment31;
+  GtkWidget *hbox31;
+  GtkWidget *image48;
+  GtkWidget *label78;
+
+  rechercherFK = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (rechercherFK), _("rechercher"));
+
+  fixed12 = gtk_fixed_new ();
+  gtk_widget_show (fixed12);
+  gtk_container_add (GTK_CONTAINER (rechercherFK), fixed12);
+
+  entry10_idPlante = gtk_entry_new ();
+  gtk_widget_show (entry10_idPlante);
+  gtk_fixed_put (GTK_FIXED (fixed12), entry10_idPlante, 200, 88);
+  gtk_widget_set_size_request (entry10_idPlante, 168, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry10_idPlante), 8226);
+
+  label77 = gtk_label_new (_("Identifiant de la plante "));
+  gtk_widget_show (label77);
+  gtk_fixed_put (GTK_FIXED (fixed12), label77, 16, 88);
+  gtk_widget_set_size_request (label77, 176, 32);
+
+  button13_rechercherRech = gtk_button_new ();
+  gtk_widget_show (button13_rechercherRech);
+  gtk_fixed_put (GTK_FIXED (fixed12), button13_rechercherRech, 152, 152);
+  gtk_widget_set_size_request (button13_rechercherRech, 136, 40);
+
+  alignment31 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment31);
+  gtk_container_add (GTK_CONTAINER (button13_rechercherRech), alignment31);
+
+  hbox31 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox31);
+  gtk_container_add (GTK_CONTAINER (alignment31), hbox31);
+
+  image48 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image48);
+  gtk_box_pack_start (GTK_BOX (hbox31), image48, FALSE, FALSE, 0);
+
+  label78 = gtk_label_new_with_mnemonic (_("Rechercher"));
+  gtk_widget_show (label78);
+  gtk_box_pack_start (GTK_BOX (hbox31), label78, FALSE, FALSE, 0);
+
+  g_signal_connect ((gpointer) button13_rechercherRech, "clicked",
+                    G_CALLBACK (on_button13_rechercherRech_clicked),
+                    NULL);
+
+  /* Store pointers to all widgets, for use by lookup_widget(). */
+  GLADE_HOOKUP_OBJECT_NO_REF (rechercherFK, rechercherFK, "rechercherFK");
+  GLADE_HOOKUP_OBJECT (rechercherFK, fixed12, "fixed12");
+  GLADE_HOOKUP_OBJECT (rechercherFK, entry10_idPlante, "entry10_idPlante");
+  GLADE_HOOKUP_OBJECT (rechercherFK, label77, "label77");
+  GLADE_HOOKUP_OBJECT (rechercherFK, button13_rechercherRech, "button13_rechercherRech");
+  GLADE_HOOKUP_OBJECT (rechercherFK, alignment31, "alignment31");
+  GLADE_HOOKUP_OBJECT (rechercherFK, hbox31, "hbox31");
+  GLADE_HOOKUP_OBJECT (rechercherFK, image48, "image48");
+  GLADE_HOOKUP_OBJECT (rechercherFK, label78, "label78");
+
+  return rechercherFK;
+}
+
+GtkWidget*
+create_afficher_rechFK (void)
+{
+  GtkWidget *afficher_rechFK;
+  GtkWidget *fixed13;
+  GtkWidget *treeview2_affRech;
+  GtkWidget *label79;
+  GtkWidget *button14_retourAffRech;
+  GtkWidget *alignment32;
+  GtkWidget *hbox32;
+  GtkWidget *image49;
+  GtkWidget *label80;
+
+  afficher_rechFK = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (afficher_rechFK), _("afficher_rechercher"));
+
+  fixed13 = gtk_fixed_new ();
+  gtk_widget_show (fixed13);
+  gtk_container_add (GTK_CONTAINER (afficher_rechFK), fixed13);
+
+  treeview2_affRech = gtk_tree_view_new ();
+  gtk_widget_show (treeview2_affRech);
+  gtk_fixed_put (GTK_FIXED (fixed13), treeview2_affRech, 64, 48);
+  gtk_widget_set_size_request (treeview2_affRech, 300, 200);
+
+  label79 = gtk_label_new ("");
+  gtk_widget_show (label79);
+  gtk_fixed_put (GTK_FIXED (fixed13), label79, 144, 352);
+  gtk_widget_set_size_request (label79, 49, 17);
+
+  button14_retourAffRech = gtk_button_new ();
+  gtk_widget_show (button14_retourAffRech);
+  gtk_fixed_put (GTK_FIXED (fixed13), button14_retourAffRech, 168, 272);
+  gtk_widget_set_size_request (button14_retourAffRech, 120, 32);
+
+  alignment32 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment32);
+  gtk_container_add (GTK_CONTAINER (button14_retourAffRech), alignment32);
+
+  hbox32 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox32);
+  gtk_container_add (GTK_CONTAINER (alignment32), hbox32);
+
+  image49 = gtk_image_new_from_stock ("gtk-undo", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image49);
+  gtk_box_pack_start (GTK_BOX (hbox32), image49, FALSE, FALSE, 0);
+
+  label80 = gtk_label_new_with_mnemonic (_("Retour"));
+  gtk_widget_show (label80);
+  gtk_box_pack_start (GTK_BOX (hbox32), label80, FALSE, FALSE, 0);
+
+  g_signal_connect ((gpointer) treeview2_affRech, "row_activated",
+                    G_CALLBACK (on_treeview2_affRech_row_activated),
+                    NULL);
+  g_signal_connect ((gpointer) button14_retourAffRech, "clicked",
+                    G_CALLBACK (on_button14_retourAffRech_clicked),
+                    NULL);
+
+  /* Store pointers to all widgets, for use by lookup_widget(). */
+  GLADE_HOOKUP_OBJECT_NO_REF (afficher_rechFK, afficher_rechFK, "afficher_rechFK");
+  GLADE_HOOKUP_OBJECT (afficher_rechFK, fixed13, "fixed13");
+  GLADE_HOOKUP_OBJECT (afficher_rechFK, treeview2_affRech, "treeview2_affRech");
+  GLADE_HOOKUP_OBJECT (afficher_rechFK, label79, "label79");
+  GLADE_HOOKUP_OBJECT (afficher_rechFK, button14_retourAffRech, "button14_retourAffRech");
+  GLADE_HOOKUP_OBJECT (afficher_rechFK, alignment32, "alignment32");
+  GLADE_HOOKUP_OBJECT (afficher_rechFK, hbox32, "hbox32");
+  GLADE_HOOKUP_OBJECT (afficher_rechFK, image49, "image49");
+  GLADE_HOOKUP_OBJECT (afficher_rechFK, label80, "label80");
+
+  return afficher_rechFK;
+}
+
+GtkWidget*
+create_consulterFK (void)
+{
+  GtkWidget *consulterFK;
+  GtkWidget *fixed14;
+  GtkWidget *treeview3_consult;
+  GtkWidget *label81;
+  GtkWidget *button15_retourConsult;
+  GtkWidget *alignment33;
+  GtkWidget *hbox33;
+  GtkWidget *image50;
+  GtkWidget *label82;
+
+  consulterFK = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (consulterFK), _("Consulter la liste des plante"));
+
+  fixed14 = gtk_fixed_new ();
+  gtk_widget_show (fixed14);
+  gtk_container_add (GTK_CONTAINER (consulterFK), fixed14);
+
+  treeview3_consult = gtk_tree_view_new ();
+  gtk_widget_show (treeview3_consult);
+  gtk_fixed_put (GTK_FIXED (fixed14), treeview3_consult, 64, 48);
+  gtk_widget_set_size_request (treeview3_consult, 704, 216);
+
+  label81 = gtk_label_new (_("La liste d'ouvriers "));
+  gtk_widget_show (label81);
+  gtk_fixed_put (GTK_FIXED (fixed14), label81, 192, 16);
+  gtk_widget_set_size_request (label81, 49, 17);
+
+  button15_retourConsult = gtk_button_new ();
+  gtk_widget_show (button15_retourConsult);
+  gtk_fixed_put (GTK_FIXED (fixed14), button15_retourConsult, 184, 280);
+  gtk_widget_set_size_request (button15_retourConsult, 112, 32);
+
+  alignment33 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment33);
+  gtk_container_add (GTK_CONTAINER (button15_retourConsult), alignment33);
+
+  hbox33 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox33);
+  gtk_container_add (GTK_CONTAINER (alignment33), hbox33);
+
+  image50 = gtk_image_new_from_stock ("gtk-undo", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image50);
+  gtk_box_pack_start (GTK_BOX (hbox33), image50, FALSE, FALSE, 0);
+
+  label82 = gtk_label_new_with_mnemonic (_("Retour"));
+  gtk_widget_show (label82);
+  gtk_box_pack_start (GTK_BOX (hbox33), label82, FALSE, FALSE, 0);
+
+  g_signal_connect ((gpointer) treeview3_consult, "row_activated",
+                    G_CALLBACK (on_treeview3_consult_row_activated),
+                    NULL);
+  g_signal_connect ((gpointer) button15_retourConsult, "clicked",
+                    G_CALLBACK (on_button15_retourConsult_clicked),
+                    NULL);
+
+  /* Store pointers to all widgets, for use by lookup_widget(). */
+  GLADE_HOOKUP_OBJECT_NO_REF (consulterFK, consulterFK, "consulterFK");
+  GLADE_HOOKUP_OBJECT (consulterFK, fixed14, "fixed14");
+  GLADE_HOOKUP_OBJECT (consulterFK, treeview3_consult, "treeview3_consult");
+  GLADE_HOOKUP_OBJECT (consulterFK, label81, "label81");
+  GLADE_HOOKUP_OBJECT (consulterFK, button15_retourConsult, "button15_retourConsult");
+  GLADE_HOOKUP_OBJECT (consulterFK, alignment33, "alignment33");
+  GLADE_HOOKUP_OBJECT (consulterFK, hbox33, "hbox33");
+  GLADE_HOOKUP_OBJECT (consulterFK, image50, "image50");
+  GLADE_HOOKUP_OBJECT (consulterFK, label82, "label82");
+
+  return consulterFK;
+}
+
