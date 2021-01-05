@@ -16,3 +16,8 @@ GtkWidget* create_supprimerFK (void);
 GtkWidget* create_rechercherFK (void);
 GtkWidget* create_afficher_rechFK (void);
 GtkWidget* create_consulterFK (void);
+GtkWidget* create_fenetre_Accueil (void);
+GtkWidget* create_fenetre_Ajouter (void);
+GtkWidget* create_fenetre_Modifier (void);
+GtkWidget* create_fenetre_Alarmente (void);
+GtkWidget* create_gestion_capteur (void);

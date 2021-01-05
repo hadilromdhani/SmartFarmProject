@@ -206,3 +206,91 @@ on_treeview3_consult_row_activated     (GtkTreeView     *treeview,
 void
 on_button15_retourConsult_clicked      (GtkButton       *button,
                                         gpointer         user_data);
+
+void
+on_button_accueil_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_button_alarmentes_clicked           (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_button_quitter_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_radiobutton2_toggled                (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_radiobutton1_toggled                (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_buttonOk_clicked                    (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttonAnnuler_clicked               (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_radiobutton3_toggled                (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_radiobutton4_toggled                (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_checkbutton1_toggled                (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_buttonOk1_clicked                   (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttonAnnuler1_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_treeview2_row_activated             (GtkTreeView     *treeview,
+                                        GtkTreePath     *path,
+                                        GtkTreeViewColumn *column,
+                                        gpointer         user_data);
+
+void
+on_buttoRetour2_clicked                (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_treeview1_row_activated             (GtkTreeView     *treeview,
+                                        GtkTreePath     *path,
+                                        GtkTreeViewColumn *column,
+                                        gpointer         user_data);
+
+void
+on_buttonRechercher_clicked            (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttonAfficher_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttonAjouter_clicked               (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttonModifier_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttonSupprimer_clicked             (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_button_Retour_gestion_clicked       (GtkButton       *button,
+                                        gpointer         user_data);

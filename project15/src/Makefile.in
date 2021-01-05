@@ -100,7 +100,8 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_project15_OBJECTS = main.$(OBJEXT) support.$(OBJEXT) \
-	interface.$(OBJEXT) callbacks.$(OBJEXT) trp.$(OBJEXT)
+	interface.$(OBJEXT) callbacks.$(OBJEXT) trp.$(OBJEXT) \
+	capteur.$(OBJEXT)
 project15_OBJECTS = $(am_project15_OBJECTS)
 am__DEPENDENCIES_1 =
 project15_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -282,7 +283,8 @@ project15_SOURCES = \
 	support.c support.h \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
-	trp.c trp.h
+	trp.c trp.h \
+	capteur.c capteur.h
 
 project15_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 all: all-am
@@ -372,6 +374,7 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/callbacks.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/capteur.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/interface.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/support.Po@am__quote@
