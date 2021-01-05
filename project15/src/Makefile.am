@@ -12,8 +12,7 @@ project15_SOURCES = \
 	support.c support.h \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
-	trp.c trp.h \
-	capteur.c capteur.h
+	trp.c trp.h
 
 project15_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 

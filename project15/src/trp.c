@@ -184,7 +184,6 @@ nb++;
 }
 return nb ;
 }
-
 int verif(char login[], char pasw[])
 {
 int trouve;
