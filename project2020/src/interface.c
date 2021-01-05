@@ -42,6 +42,7 @@ create_acceuil (void)
   GtkWidget *hbox1;
   GtkWidget *image3;
   GtkWidget *label3;
+  GtkWidget *label47_message;
 
   acceuil = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (acceuil), _("Acceuil"));
@@ -103,6 +104,11 @@ create_acceuil (void)
   gtk_widget_show (label3);
   gtk_box_pack_start (GTK_BOX (hbox1), label3, FALSE, FALSE, 0);
 
+  label47_message = gtk_label_new (_("message"));
+  gtk_widget_show (label47_message);
+  gtk_fixed_put (GTK_FIXED (fixed1), label47_message, 192, 432);
+  gtk_widget_set_size_request (label47_message, 400, 25);
+
   g_signal_connect ((gpointer) button1_validerAcceuil, "clicked",
                     G_CALLBACK (on_button1_validerAcceuil_clicked),
                     NULL);
@@ -121,6 +127,7 @@ create_acceuil (void)
   GLADE_HOOKUP_OBJECT (acceuil, hbox1, "hbox1");
   GLADE_HOOKUP_OBJECT (acceuil, image3, "image3");
   GLADE_HOOKUP_OBJECT (acceuil, label3, "label3");
+  GLADE_HOOKUP_OBJECT (acceuil, label47_message, "label47_message");
 
   return acceuil;
 }

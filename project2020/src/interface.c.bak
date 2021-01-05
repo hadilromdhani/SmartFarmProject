@@ -377,6 +377,11 @@ create_gestionTrp (void)
   GtkWidget *hbox10;
   GtkWidget *image17;
   GtkWidget *label19;
+  GtkWidget *button1_retourGestion;
+  GtkWidget *alignment19;
+  GtkWidget *hbox19;
+  GtkWidget *image32;
+  GtkWidget *label46;
   GtkWidget *button11_chercher;
   GtkWidget *alignment11;
   GtkWidget *hbox11;
@@ -573,7 +578,7 @@ create_gestionTrp (void)
 
   button10_supprimer = gtk_button_new ();
   gtk_widget_show (button10_supprimer);
-  gtk_fixed_put (GTK_FIXED (fixed3), button10_supprimer, 176, 560);
+  gtk_fixed_put (GTK_FIXED (fixed3), button10_supprimer, 104, 560);
   gtk_widget_set_size_request (button10_supprimer, 112, 37);
 
   alignment10 = gtk_alignment_new (0.5, 0.5, 0, 0);
@@ -592,9 +597,30 @@ create_gestionTrp (void)
   gtk_widget_show (label19);
   gtk_box_pack_start (GTK_BOX (hbox10), label19, FALSE, FALSE, 0);
 
+  button1_retourGestion = gtk_button_new ();
+  gtk_widget_show (button1_retourGestion);
+  gtk_fixed_put (GTK_FIXED (fixed3), button1_retourGestion, 104, 504);
+  gtk_widget_set_size_request (button1_retourGestion, 104, 37);
+
+  alignment19 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment19);
+  gtk_container_add (GTK_CONTAINER (button1_retourGestion), alignment19);
+
+  hbox19 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox19);
+  gtk_container_add (GTK_CONTAINER (alignment19), hbox19);
+
+  image32 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image32);
+  gtk_box_pack_start (GTK_BOX (hbox19), image32, FALSE, FALSE, 0);
+
+  label46 = gtk_label_new_with_mnemonic (_("Retour"));
+  gtk_widget_show (label46);
+  gtk_box_pack_start (GTK_BOX (hbox19), label46, FALSE, FALSE, 0);
+
   button11_chercher = gtk_button_new ();
   gtk_widget_show (button11_chercher);
-  gtk_fixed_put (GTK_FIXED (fixed3), button11_chercher, 336, 560);
+  gtk_fixed_put (GTK_FIXED (fixed3), button11_chercher, 256, 560);
   gtk_widget_set_size_request (button11_chercher, 112, 37);
 
   alignment11 = gtk_alignment_new (0.5, 0.5, 0, 0);
@@ -615,7 +641,7 @@ create_gestionTrp (void)
 
   button12_afficher = gtk_button_new ();
   gtk_widget_show (button12_afficher);
-  gtk_fixed_put (GTK_FIXED (fixed3), button12_afficher, 496, 560);
+  gtk_fixed_put (GTK_FIXED (fixed3), button12_afficher, 424, 560);
   gtk_widget_set_size_request (button12_afficher, 112, 37);
 
   alignment12 = gtk_alignment_new (0.5, 0.5, 0, 0);
@@ -657,6 +683,9 @@ create_gestionTrp (void)
                     NULL);
   g_signal_connect ((gpointer) button10_supprimer, "clicked",
                     G_CALLBACK (on_button10_supprimer_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) button1_retourGestion, "clicked",
+                    G_CALLBACK (on_button1_retourGestion_clicked),
                     NULL);
   g_signal_connect ((gpointer) button11_chercher, "clicked",
                     G_CALLBACK (on_button11_chercher_clicked),
@@ -708,6 +737,11 @@ create_gestionTrp (void)
   GLADE_HOOKUP_OBJECT (gestionTrp, hbox10, "hbox10");
   GLADE_HOOKUP_OBJECT (gestionTrp, image17, "image17");
   GLADE_HOOKUP_OBJECT (gestionTrp, label19, "label19");
+  GLADE_HOOKUP_OBJECT (gestionTrp, button1_retourGestion, "button1_retourGestion");
+  GLADE_HOOKUP_OBJECT (gestionTrp, alignment19, "alignment19");
+  GLADE_HOOKUP_OBJECT (gestionTrp, hbox19, "hbox19");
+  GLADE_HOOKUP_OBJECT (gestionTrp, image32, "image32");
+  GLADE_HOOKUP_OBJECT (gestionTrp, label46, "label46");
   GLADE_HOOKUP_OBJECT (gestionTrp, button11_chercher, "button11_chercher");
   GLADE_HOOKUP_OBJECT (gestionTrp, alignment11, "alignment11");
   GLADE_HOOKUP_OBJECT (gestionTrp, hbox11, "hbox11");

@@ -31,7 +31,7 @@ char pasw[20];
 int trouve;
 login=lookup_widget (objet_graphique,"entry1_loginAcceuil");
 password=lookup_widget (objet_graphique,"entry2_mdpAcceuil");
-output=lookup_widget (objet_graphique,"label46_message");
+output=lookup_widget (objet_graphique,"label47_message");
 strcpy(user, gtk_entry_get_text(GTK_ENTRY(login)));
 strcpy(pasw, gtk_entry_get_text(GTK_ENTRY(password)));
 trouve=verif(user,pasw);
